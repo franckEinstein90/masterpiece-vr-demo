@@ -16,21 +16,20 @@ class Scene1 extends React.Component {
      
         super(props);  
         
-        this.renderer = new THREE.WebGLRenderer();
-        this.renderer.setPixelRatio( window.devicePixelRatio ); 
-
+      
         this.displayedObject = {
             object: null
         }; 
-        this.scene = new THREE.Scene( );
-
+     
 
         this.animate = this.animate.bind( this ); 
         this.setUpLights = this.setUpLights.bind( this ); 
     }
 
-    componentDidMount(){
-
+    componentDidMount(){  
+        this.renderer = new THREE.WebGLRenderer();   
+        this.scene = new THREE.Scene( );
+        this.renderer.setPixelRatio( window.devicePixelRatio ); 
         const container = document.querySelector( '#' + this.props.sceneID);
         this.renderer.setSize( container.clientWidth, container.clientHeight)
         this.camera = new THREE.PerspectiveCamera( 50, container.clientWidth / container.clientHeight, 0.1, 1000 );
