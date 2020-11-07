@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
     <footer style={{
           marginTop: `2rem`
         }}> 
-        <div class="container">
+        <div className ="container">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>, JQuery, React, 3js and bootstrap
