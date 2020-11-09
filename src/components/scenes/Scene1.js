@@ -104,6 +104,13 @@ class Scene1 extends React.Component {
         return (   
             <div className ="col-md-6">
             <div className="card mb6 box-shadow scene-container" id={this.props.sceneID}>
+                <div className ="card-body">
+                    <p className ="card-text">
+                        {this.props.des}
+                    </p>
+                    <div className ="d-flex justify-content-between align-items-center">
+                                    </div>
+                </div>
             </div>
             </div>
         )
